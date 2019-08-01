@@ -4782,7 +4782,7 @@ rimraf@^2.5.4, rimraf@^2.6.1:
   dependencies:
     glob "^7.0.5"
 
-"rn-legacy-59@https://github.com/bright-systems/rn-legacy-59":
+"rn-legacy-59@https://github.com/bright-systems/rn-legacy-59#d67e5ee49f1c422e52b5d7d92010ca600a0f2181":
   version "1.0.0"
   resolved "https://github.com/bright-systems/rn-legacy-59#d67e5ee49f1c422e52b5d7d92010ca600a0f2181"
 
