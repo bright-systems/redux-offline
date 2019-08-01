@@ -4,7 +4,7 @@ let NetInfo
 if (VersionNumber.appVersion >= '2.0.7') {
   NetInfo = require('@react-native-community/netinfo').default; // eslint-disable-line
 } else {
-  NetInfo = require('react-native').NetInfo; // eslint-disable-line
+  NetInfo = require('rn-legacy-59').NetInfo; // eslint-disable-line
 }
 import { AppState } from 'react-native'; // eslint-disable-line
 
