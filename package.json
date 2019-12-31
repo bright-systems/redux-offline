@@ -60,6 +60,7 @@
     "@babel/runtime": "^7.5.5",
     "react-native-version-number": "^0.3.6",
     "redux-persist": "^4.6.0",
+    "@react-native-community/netinfo-4.1.2": "https://github.com/bright-systems/react-native-netinfo-4.1.2",
     "rn-legacy-59": "https://github.com/bright-systems/rn-legacy-59#d67e5ee49f1c422e52b5d7d92010ca600a0f2181"
   },
   "peerDependencies": {
