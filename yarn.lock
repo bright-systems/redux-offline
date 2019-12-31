@@ -945,6 +945,11 @@
   version "4.1.2"
   resolved "https://github.com/bright-systems/react-native-netinfo-4.1.2#3131f0e74df9ee1ee28c4fcebd18b055b4fac308"
 
+"@react-native-community/netinfo@5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-5.2.0.tgz#0ad6d5d5cfd01d31d16ef819fe15c29fa7352bd4"
+  integrity sha512-AhpRzJEAPnqNS6hN8xluoKC5t0toaTQTl+IlGdKhGbvvTvarANnBvmvwLbvTyOOkDCZJc2RTPKVXqhPk/O6P/g==
+
 "@types/babel__core@^7.1.0":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.2.tgz#608c74f55928033fce18b99b213c16be4b3d114f"
