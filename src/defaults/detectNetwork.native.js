@@ -96,7 +96,7 @@ class DetectNetwork {
    * @private
    */
   _init = async () => {
-    const connectionInfo = await NetInfo.getConnectionInfo();
+    const connectionInfo = await NetInfo.getConnectionInfo() || await NetInfo.fetch();
     if (this._shouldInitUpdateReach) {
       this._update(connectionInfo.type);
     }
@@ -123,13 +123,20 @@ class DetectNetwork {
    * @private
    */
   _addListeners() {
-    NetInfo.addEventListener('connectionChange', connectionInfo => {
-      this._setShouldInitUpdateReach(false);
-      this._update(connectionInfo.type);
-    });
+    if (VersionNumber.appVersion >= '2.4.13') {
+      NetInfo.addEventListener(connectionInfo => {
+        this._setShouldInitUpdateReach(false);
+        this._update(connectionInfo.type);
+      });
+    } else {
+      NetInfo.addEventListener('connectionChange', connectionInfo => {
+        this._setShouldInitUpdateReach(false);
+        this._update(connectionInfo.type);
+      });
+    }
     AppState.addEventListener('change', async () => {
       this._setShouldInitUpdateReach(false);
-      const connectionInfo = await NetInfo.getConnectionInfo();
+      const connectionInfo = await NetInfo.getConnectionInfo() || await NetInfo.fetch();
       this._update(connectionInfo.type);
     });
   }
