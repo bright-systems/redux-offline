@@ -141,6 +141,7 @@ class DetectNetwork {
     }
     AppState.addEventListener('change', async () => {
       this._setShouldInitUpdateReach(false);
+      let connectionInfo
       if (VersionNumber.appVersion >= '2.4.13') {
         connectionInfo = await NetInfo.fetch();
       } else {
