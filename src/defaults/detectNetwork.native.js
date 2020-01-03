@@ -3,10 +3,13 @@ import VersionNumber from 'react-native-version-number'
 import compareVersions from 'compare-versions'
 let NetInfo
 if (compareVersions(VersionNumber.appVersion, '2.4.13', '>=') >= 0) {
+  console.log('redux-offline - loading netinfo')
   NetInfo = require('@react-native-community/netinfo').default; // eslint-disable-line
 } else if (compareVersions(VersionNumber.appVersion, '2.0.7', '>=') >= 0) {
+  console.log('redux-offline - loading netinfo-4.1.2')
   NetInfo = require('@react-native-community/netinfo-4.1.2').default; // eslint-disable-line
 } else {
+  console.log('redux-offline - loading legacy')
   NetInfo = require('rn-legacy-59').NetInfo; // eslint-disable-line
 }
 import { AppState } from 'react-native'; // eslint-disable-line
