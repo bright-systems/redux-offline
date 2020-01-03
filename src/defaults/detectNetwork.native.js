@@ -1,10 +1,10 @@
 /* eslint no-underscore-dangle: 0 */
 import VersionNumber from 'react-native-version-number'
-import semver from 'semver'
+import compareVersions from 'compare-versions'
 let NetInfo
-if (semver.satisfies(VersionNumber.appVersion, '>=2.4.13')) {
+if (compareVersions(VersionNumber.appVersion, '2.4.13', '>=')) {
   NetInfo = require('@react-native-community/netinfo').default; // eslint-disable-line
-} else if (semver.satisfies(VersionNumber.appVersion, '>=2.0.7')) {
+} else if (compareVersions(VersionNumber.appVersion, '2.0.7', '>=')) {
   NetInfo = require('@react-native-community/netinfo-4.1.2').default; // eslint-disable-line
 } else {
   NetInfo = require('rn-legacy-59').NetInfo; // eslint-disable-line
