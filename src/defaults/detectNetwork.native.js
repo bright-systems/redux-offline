@@ -2,9 +2,9 @@
 import VersionNumber from 'react-native-version-number'
 import compareVersions from 'compare-versions'
 let NetInfo
-if (compareVersions('2.4.13', VersionNumber.appVersion, '>=')) {
+if (compareVersions(VersionNumber.appVersion, '2.4.13', '>=')) {
   NetInfo = require('@react-native-community/netinfo').default; // eslint-disable-line
-} else if (compareVersions('2.0.7', VersionNumber.appVersion, '>=')) {
+} else if (compareVersions(VersionNumber.appVersion, '2.0.7', '>=')) {
   NetInfo = require('@react-native-community/netinfo-4.1.2').default; // eslint-disable-line
 } else {
   NetInfo = require('rn-legacy-59').NetInfo; // eslint-disable-line
